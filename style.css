@@ -32,8 +32,8 @@
     }
 }
 .city{
-    height: 250px;
-    width: 500%;
+    height: 250px; /* The height of the city is set on 250px */
+    width: 500%; /* The width of the city is set on 500% */
     background-image: url(city.png);
     position: absolute;
     bottom: 200px;
@@ -43,4 +43,59 @@
     z-index: 1;
     background-repeat: repeat-x;
     animation: city 20s linear infinite;
+}
+@keyframes city /*city is animated*/
+{
+    100%{
+        transform: translate(-1400px);
+    }
+}
+.car{
+    width: 400px;
+    left: 50%;
+    bottom: 100px;
+    transform: translate(-50%);
+    position: absolute;
+    z-index: 2;
+}
+.car img
+{
+    width: 100%;
+    animation: car 1s linear infinite;
+}
+@keyframes car /*car is animated*/{
+    100%{
+        transform: translateY(-1px);
+    }
+    50%{
+        transform: translateY(1px);
+    }
+    0%{
+        transform: translateY(-1px);
+    }
+}
+.wheel{
+    left: 50%;
+    bottom: 178px;
+    transform: translateX(-50%);
+    position: absolute;
+    z-index: 2;
+}
+.wheel img{
+    width: 72px;
+    height: 72px;
+    animation: wheel 1s linear infinite;
+}
+.back-wheel{
+    left: -165px;
+    position: absolute;
+}
+.front-wheel{
+    left: 80px;
+    position: absolute;
+}
+@keyframes wheel /*wheel of cars in animated*/{
+    100%{
+        transform: rotate(360deg);
+    }
 }
